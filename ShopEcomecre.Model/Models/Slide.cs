@@ -10,18 +10,22 @@ using System.Threading.Tasks;
 namespace ShopEcomecre.Model.Models
 {
     [Table("Slides")]
-    public class Slide :Auditable
+    public class Slide 
     {
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string ID { get; set; }
-
+        [Required]
+        [MaxLength(256)]
         public string Name { get; set; }
-
+        [MaxLength(256)]
         public string Description { get; set; }
+        [MaxLength(256)]
         public string Image { get; set; }
-        public string URL { get; set; }
-        public int DisplayOrder { get; set; }
+        [MaxLength(256)]
+        public string Url { get; set; }
+        public int? DisplayOrder { get; set; }
         public bool Status { get; set; }
 
     }

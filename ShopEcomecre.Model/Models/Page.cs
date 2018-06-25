@@ -1,27 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ShopEcomecre.Model.Abstract;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopEcomecre.Model.Models
 {
     [Table("Pages")]
-   public class Page
+    public class Page : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
-       
+
+        [Required]
+        [MaxLength(256)]
         public string Name { get; set; }
 
-      
+        [Column(TypeName = "varchar")]
+        [Required]
+        [MaxLength(256)]
+        public string Alias { get; set; }
+
         public string Content { get; set; }
- 
-        public string MetaKeyword { get; set; }
-        public string MetaDescription { get; set; }
-        public bool? Status { get; set; }
     }
 }

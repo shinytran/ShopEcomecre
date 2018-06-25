@@ -13,16 +13,23 @@ namespace ShopEcomecre.Model.Models
         public int ID { get; set; }
 
         [Required]
+        [MaxLength(256)]
         public string Name { get; set; }
 
+        [Column(TypeName = "varchar")]
         [Required]
+        [MaxLength(256)]
         public string Alias { get; set; }
 
-        public int ParentID { get; set; }
-        public string Image { get; set; }
-        public int DisplayOrder { get; set; }
+        [MaxLength(500)]
+        public string Description { get; set; }
 
-        public string CreateBy { get; set; }
+        public int? ParentID { get; set; }
+
+        [MaxLength(256)]
+        public string Image { get; set; }
+
+        public int? DisplayOrder { get; set; }
 
         public bool? HomeFlag { get; set; }
         public bool? HotFlag { get; set; }
