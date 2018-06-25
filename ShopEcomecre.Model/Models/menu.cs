@@ -12,6 +12,7 @@ namespace ShopEcomecre.Model.Models
     public class Menu
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
@@ -23,7 +24,7 @@ namespace ShopEcomecre.Model.Models
         public string GroupID { get; set; }
 
         [ForeignKey("GroupID")]
-        public virtual MenuGroup Menus { set; get; }
+        public virtual MenuGroup Menugroup { set; get; }
 
         public string Target { get; set; }
         [Required]

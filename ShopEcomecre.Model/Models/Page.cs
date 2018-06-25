@@ -8,15 +8,20 @@ using System.Threading.Tasks;
 
 namespace ShopEcomecre.Model.Models
 {
-    [Table("MenuGroups")]
-    public class MenuGroup
+    [Table("Pages")]
+   public class Page
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
-        [Required]
+        public int ID { set; get; }
+       
         public string Name { get; set; }
 
-        public virtual IEnumerable<Menu> Menus { set; get; }
+      
+        public string Content { get; set; }
+ 
+        public string MetaKeyword { get; set; }
+        public string MetaDescription { get; set; }
+        public bool? Status { get; set; }
     }
 }

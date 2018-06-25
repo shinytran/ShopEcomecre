@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopEcomecre.Model.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,15 +9,13 @@ using System.Threading.Tasks;
 
 namespace ShopEcomecre.Model.Models
 {
-    [Table("MenuGroups")]
-    public class MenuGroup
+    [Table("ProductTags")]
+  public class ProductTag : Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
-        [Required]
-        public string Name { get; set; }
-
-        public virtual IEnumerable<Menu> Menus { set; get; }
+        public int ProductID { set; get; }
+        [Key]
+        public string TagID { get; set; }
     }
 }
