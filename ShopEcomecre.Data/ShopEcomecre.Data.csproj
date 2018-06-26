@@ -50,17 +50,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EcomecreDbContext.cs" />
+    <Compile Include="Infratructure\DbFactory.cs" />
+    <Compile Include="Infratructure\Disposable.cs" />
+    <Compile Include="Infratructure\IDbFactory.cs" />
+    <Compile Include="Infratructure\IRepository.cs" />
+    <Compile Include="Infratructure\IUnitOfWork.cs" />
+    <Compile Include="Infratructure\RepositoryBase.cs" />
+    <Compile Include="Infratructure\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ShopEcomecre.Model\ShopEcomecre.Model.csproj">
+      <Project>{35521452-9c7b-4b32-851c-11ea7c7f91a3}</Project>
+      <Name>ShopEcomecre.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ShopEcomecre\ShopEcomecre.Common.csproj">
       <Project>{8f474ef5-d423-48fc-b54d-ec3bd3e6498d}</Project>
       <Name>ShopEcomecre.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
