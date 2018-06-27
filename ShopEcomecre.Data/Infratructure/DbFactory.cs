@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopEcomecre.Data.Infratructure
 {
-   public class DbFactory : Disposable, IDbFactory
+    public class DbFactory : Disposable, IDbFactory
     {
-        EcomecreDbContext dbContext;
+        private EcomecreDbContext dbContext;
+
         public EcomecreDbContext Init()
         {
             try
@@ -17,18 +14,17 @@ namespace ShopEcomecre.Data.Infratructure
             }
             catch (Exception)
             {
-
                 throw;
             }
             throw new NotImplementedException();
         }
+
         protected override void DisposeCore()
         {
-            if (dbContext!=null)
+            if (dbContext != null)
             {
                 dbContext.Dispose();
             }
-           
         }
     }
 }

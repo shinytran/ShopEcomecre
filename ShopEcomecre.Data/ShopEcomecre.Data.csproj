@@ -58,7 +58,40 @@
     <Compile Include="Infratructure\IUnitOfWork.cs" />
     <Compile Include="Infratructure\RepositoryBase.cs" />
     <Compile Include="Infratructure\UnitOfWork.cs" />
+    <Compile Include="Interfaces\IProductCategoryRepository.cs" />
+    <Compile Include="Interfaces\ISupportOnlineRepository.cs" />
+    <Compile Include="Interfaces\ISlideRepository.cs" />
+    <Compile Include="Interfaces\IPostTagRepository.cs" />
+    <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfaces\ISystemConfigRepository.cs" />
+    <Compile Include="Interfaces\IPageRepository.cs" />
+    <Compile Include="Interfaces\IPostCategoryRepository.cs" />
+    <Compile Include="Interfaces\IPostRepository.cs" />
+    <Compile Include="Interfaces\ITagRepository.cs" />
+    <Compile Include="Interfaces\IVisiterStatiticRepository.cs" />
+    <Compile Include="Interfaces\IOrderDetailRepository.cs" />
+    <Compile Include="Interfaces\IOrderRepository.cs" />
+    <Compile Include="Repositories\FooterRepository.cs" />
+    <Compile Include="Interfaces\IFooterRepository.cs" />
+    <Compile Include="Interfaces\IMenuGroupRepository.cs" />
+    <Compile Include="Interfaces\IMenuRepository.cs" />
+    <Compile Include="Repositories\MenuGroupRepository.cs" />
+    <Compile Include="Repositories\MenuRepository.cs" />
+    <Compile Include="Repositories\OrderDetailRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\PageRepository.cs" />
+    <Compile Include="Repositories\PostCategoryRepository.cs" />
+    <Compile Include="Repositories\PostRepository.cs" />
+    <Compile Include="Repositories\PostTagRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\SlideRepository.cs" />
+    <Compile Include="Repositories\SupportOnlineRepository.cs" />
+    <Compile Include="Repositories\SystemConfigRepository.cs" />
+    <Compile Include="Repositories\TagRepository.cs" />
+    <Compile Include="Repositories\VisiterStatiticRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -78,9 +111,7 @@
       <Name>ShopEcomecre.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
