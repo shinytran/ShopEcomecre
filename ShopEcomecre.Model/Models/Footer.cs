@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShopEcomecre.Model.Models
 {
-    [Table("Footer")]
+    [Table("Footers")]
     public class Footer
     {
         [Key]

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ShopEcomecre.Model.Models
 {
     [Table("ProductCategories")]
-    public class ProductCategory : Auditable
+    public class ProductCategory :Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

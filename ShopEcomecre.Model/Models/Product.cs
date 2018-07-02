@@ -6,7 +6,7 @@ using System.Xml.Linq;
 namespace ShopEcomecre.Model.Models
 {
     [Table("Products")]
-    public class Product : Auditable
+    public class Product :Auditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -23,7 +23,8 @@ namespace ShopEcomecre.Model.Models
         public int CategoryID { get; set; }
         [MaxLength(256)]
         public string Image { get; set; }
-        public XElement MoreImages { get; set; }
+        [Column(TypeName = "xml")]
+        public string MoreImages { get; set; }
         public decimal Price { get; set; }
         public decimal? PromotionPrice { get; set; }
         public int? Warranty { get; set; }

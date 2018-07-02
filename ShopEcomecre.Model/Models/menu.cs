@@ -20,14 +20,14 @@ namespace ShopEcomecre.Model.Models
         public int? DisplayOrder { get; set; }
 
         [Required]
-        public string GroupID { get; set; }
+        public int GroupID { get; set; }
 
         [ForeignKey("GroupID")]
         public virtual MenuGroup Menugroup { set; get; }
-
+        [MaxLength(10)]
         public string Target { get; set; }
 
-        [Required]
+        
         public bool Status { set; get; }
     }
 }

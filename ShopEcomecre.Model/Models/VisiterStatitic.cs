@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ShopEcomecre.Model.Models
 {
     [Table("VisiterStatitics")]
-    public class VisiterStatitic : Auditable
+    public class VisiterStatitic 
     {
         [Key]
         public Guid ID { set; get; }
