@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ShopEcomecre.Model.Models
 {
     [Table("SupportOnlines")]
-    public class SupportOnline : Auditable
+    public class SupportOnline
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -29,6 +29,8 @@ namespace ShopEcomecre.Model.Models
 
         [MaxLength(50)]
         public string Mobile { get; set; }
+
         public int? DisplayOrder { get; set; }
+        public bool Status { get; set; }
     }
 }

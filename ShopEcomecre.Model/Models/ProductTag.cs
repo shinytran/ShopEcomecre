@@ -5,13 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace ShopEcomecre.Model.Models
 {
     [Table("ProductTags")]
-    public class ProductTag : Auditable
+    public class ProductTag 
     {
-        [Key]
+        [Key, Column(Order = 0)]
         public int ProductID { set; get; }
 
         [Key]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar",Order =1)]
         [MaxLength(50)]
         public string TagID { get; set; }
 

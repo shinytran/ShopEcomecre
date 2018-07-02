@@ -63,6 +63,10 @@
     <Compile Include="Interfaces\ISlideRepository.cs" />
     <Compile Include="Interfaces\IPostTagRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="Migrations\201807020344263_IntialDB.cs" />
+    <Compile Include="Migrations\201807020344263_IntialDB.Designer.cs">
+      <DependentUpon>201807020344263_IntialDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\ISystemConfigRepository.cs" />
@@ -111,7 +115,11 @@
       <Name>ShopEcomecre.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807020344263_IntialDB.resx">
+      <DependentUpon>201807020344263_IntialDB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

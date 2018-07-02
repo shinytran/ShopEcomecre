@@ -6,11 +6,11 @@ namespace ShopEcomecre.Model.Models
     [Table("SystemConfigs")]
     public class SystemConfig
     {
-        [Key]
+        [Key, Column(Order = 0)]
         public int ID { get; set; }
 
         [Key]
-        [Column(TypeName = "varchar")]
+        [Column(TypeName = "varchar",Order =1)]
         [MaxLength(50)]
         public string Code { get; set; }
 
