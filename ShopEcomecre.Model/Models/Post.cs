@@ -1,5 +1,6 @@
 ﻿using ShopEcomecre.Model.Abstract;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -46,5 +47,6 @@ namespace ShopEcomecre.Model.Models
 
         [ForeignKey("CategoryID")]
         public virtual PostCategory PostCategory { set; get; }
+        public IEnumerable<PostTag>  PostTags { set; get; }
     }
 }
