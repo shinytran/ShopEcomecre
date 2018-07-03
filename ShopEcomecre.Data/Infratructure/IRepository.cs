@@ -11,6 +11,7 @@ namespace ShopEcomecre.Data.Infratructure
         void Update(T entity);
 
         void Delete(T entity);
+        void Delete(int id);
 
         void DeleteMulti(Expression<Func<T, bool>> where);
 

@@ -1,6 +1,9 @@
-﻿namespace ShopEcomecre.Data.Interfaces
+﻿using ShopEcomecre.Data.Infratructure;
+using ShopEcomecre.Model.Models;
+
+namespace ShopEcomecre.Data.Interfaces
 {
-    public interface ISupportOnlineRepository
+    public interface ISupportOnlineRepository : IRepository<SupportOnline>
     {
     }
 }

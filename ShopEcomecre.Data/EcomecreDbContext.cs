@@ -18,7 +18,7 @@ namespace ShopEcomecre.Data
         public DbSet<Page> Pages { set; get; }
         public DbSet<Post> Posts { set; get; }
         public DbSet<PostCategory> PostCategorys { set; get; }
-        public DbSet<PostTag> PostTags { set; get; }
+        public DbSet<ProductCategory> PostTags { set; get; }
         public DbSet<Product> Products { set; get; }
         public DbSet<ProductCategory> ProductCategories { set; get; }
         public DbSet<ProductTag> ProductTags { set; get; }

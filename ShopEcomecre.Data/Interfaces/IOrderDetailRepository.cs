@@ -1,6 +1,9 @@
-﻿namespace ShopEcomecre.Data.Repositories
+﻿using ShopEcomecre.Data.Infratructure;
+using ShopEcomecre.Model.Models;
+
+namespace ShopEcomecre.Data.Repositories
 {
-    internal interface IOrderDetailRepository
+    internal interface IOrderDetailRepository : IRepository<OrderDetail>
     {
     }
 }
