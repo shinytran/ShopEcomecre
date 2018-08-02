@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopEcomecre.Data.Infratructure;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace ShopEcomecre.Data.Infratructure
 
         public EcomecreDbContext Dbcontext
         {
-            get { return Dbcontext ?? (dataContext = DbFactory.Init()); }
+            get { return dataContext ?? (dataContext = DbFactory.Init()); }
         }
 
         protected RepositoryBase(IDbFactory dbFactory)
@@ -28,9 +29,9 @@ namespace ShopEcomecre.Data.Infratructure
             dbSet = Dbcontext.Set<T>();
         }
 
-        public virtual void Add(T entity)
+        public virtual T Add(T entity)
         {
-            dbSet.Add(entity);
+           return dbSet.Add(entity);
         }
 
         public virtual void Update(T entity)
@@ -39,15 +40,17 @@ namespace ShopEcomecre.Data.Infratructure
             dataContext.Entry(entity).State = EntityState.Modified;
         }
 
-        public virtual void Delete(T entity)
+        public virtual T Delete(T entity)
         {
-            dbSet.Remove(entity);
+            return dbSet.Remove(entity);
         }
-        public virtual void Delete(int id)
+
+        public virtual T Delete(int id)
         {
             var entity = dbSet.Find(id);
-            dbSet.Remove(entity);
+            return dbSet.Remove(entity);
         }
+
         public virtual void DeleteMulti(Expression<Func<T, bool>> where)
         {
             IEnumerable<T> objects = dbSet.Where<T>(where).AsEnumerable();

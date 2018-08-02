@@ -12,9 +12,9 @@ namespace ShopEcomecre.Data.Infratructure
             {
                 return dbContext ?? (dbContext = new EcomecreDbContext());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             throw new NotImplementedException();
         }
