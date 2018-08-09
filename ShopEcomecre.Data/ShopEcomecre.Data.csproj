@@ -81,10 +81,12 @@
     <Compile Include="Interfaces\IVisiterStatiticRepository.cs" />
     <Compile Include="Interfaces\IOrderDetailRepository.cs" />
     <Compile Include="Interfaces\IOrderRepository.cs" />
+    <Compile Include="Repositories\ErrorRepository.cs" />
     <Compile Include="Repositories\FooterRepository.cs" />
     <Compile Include="Interfaces\IFooterRepository.cs" />
     <Compile Include="Interfaces\IMenuGroupRepository.cs" />
     <Compile Include="Interfaces\IMenuRepository.cs" />
+    <Compile Include="Interfaces\IErrorRepository.cs" />
     <Compile Include="Repositories\MenuGroupRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
     <Compile Include="Repositories\OrderDetailRepository.cs" />
